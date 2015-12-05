@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE editor_palette_item PUBLIC "-//NetBeans//Editor Palette Item 1.1//EN" 
+  "https://netbeans.org/dtds/editor-palette-item-1_1.dtd"> 
+  
+  <editor_palette_item version="1.1"> 
+      
+      <class name = "org.netbeans.modules.multilangsourcefilepalette.python.Variables.Variable" /> 
+      
+      <icon16 urlvalue="org/netbeans/modules/multilangsourcefilepalette/python/Variables/BR16.png" /> 
+      <icon32 urlvalue="org/netbeans/modules/multilangsourcefilepalette/python/Variables/BR32.png" /> 
+      
+      <inline-description>
+          <display-name>Variable</display-name>
+          <tooltip> <![CDATA[ variable_name = value  ]]></tooltip>
+      </inline-description>
+      
+  </editor_palette_item>

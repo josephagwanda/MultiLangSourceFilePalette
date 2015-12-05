@@ -15,10 +15,16 @@
             <attr name = "position" intvalue="150"/>     
         </file>
     </folder>
-</folder>
-
-<folder name = "CppPalette"> 
-    
+    <folder name = "Variables"> 
+         <file name = "Variable.xml" url="python/Variables/Variable.xml"> 
+            <attr name = "position" intvalue="150"/>     
+        </file>
+    </folder>
+    <folder name = "Decisions"> 
+        <file name = "SingleLineIf.xml" url="python/Decisions/SingleLineIf.xml"> 
+            <attr name = "position" intvalue="150"/>     
+        </file>
+    </folder>    
 </folder>
         
 </filesystem>
