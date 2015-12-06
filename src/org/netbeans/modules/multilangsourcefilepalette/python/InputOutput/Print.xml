@@ -4,14 +4,14 @@
   
   <editor_palette_item version="1.1"> 
       
-      <class name = "org.netbeans.modules.multilangsourcefilepalette.python.Decisions.IfStatement" /> 
+      <class name = "org.netbeans.modules.multilangsourcefilepalette.python.InputOutput.Print" /> 
       
       <icon16 urlvalue="org/netbeans/modules/multilangsourcefilepalette/icons/BR16.png" /> 
       <icon32 urlvalue="org/netbeans/modules/multilangsourcefilepalette/icons/BR32.png" /> 
       
       <inline-description>
-          <display-name>If</display-name>
-          <tooltip> <![CDATA[ if ( condition ) : body  ]]></tooltip>
+          <display-name>Print</display-name>
+          <tooltip> <![CDATA[ print 'output'  ]]></tooltip>
       </inline-description>
       
   </editor_palette_item>

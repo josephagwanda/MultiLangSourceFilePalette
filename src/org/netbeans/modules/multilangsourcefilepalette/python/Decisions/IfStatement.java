@@ -5,23 +5,24 @@ import javax.swing.text.JTextComponent;
 import org.netbeans.modules.multilangsourcefilepalette.PaletteUtilities;
 import org.openide.text.ActiveEditorDrop;
 
-public class SingleLineIf implements ActiveEditorDrop {
+public class IfStatement implements ActiveEditorDrop {
 
     private String ifCondition = ""; 
     private String ifBody = ""; 
 
-    public SingleLineIf() {
+    public IfStatement() {
     }
 
     private String createBody() {
-        String SingleLineIf = String.format("if ( %s ) : %s", getIfCondition(), getIfBody());
-        return SingleLineIf;
+        String IfStatement = String.format("if %s:"
+                + "\n    %s", getIfCondition(), getIfBody());
+        return IfStatement;
     }
 
     @Override
     public boolean handleTransfer(JTextComponent targetComponent) {
 
-        SingleLineIfCustomizer c = new SingleLineIfCustomizer(this, targetComponent);
+        IfStatementCustomizer c = new IfStatementCustomizer(this, targetComponent);
         boolean accept = c.showDialog();
         if (accept) {
             String body = createBody();

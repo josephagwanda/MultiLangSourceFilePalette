@@ -24,7 +24,15 @@
         <file name = "SingleLineIf.xml" url="python/Decisions/SingleLineIf.xml"> 
             <attr name = "position" intvalue="150"/>     
         </file>
+        <file name = "IfStatement.xml" url="python/Decisions/IfStatement.xml"> 
+            <attr name = "position" intvalue="150"/>     
+        </file>
     </folder>    
+    <folder name = "InputOutput"> 
+        <file name = "Print.xml" url="python/InputOutput/Print.xml"> 
+            <attr name = "position" intvalue="150"/>     
+        </file>
+    </folder>
 </folder>
         
 </filesystem>

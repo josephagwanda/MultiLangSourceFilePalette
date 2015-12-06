@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.netbeans.modules.multilangsourcefilepalette.python.Comments;
+package org.netbeans.modules.multilangsourcefilepalette.python.InputOutput;
 
+import org.netbeans.modules.multilangsourcefilepalette.python.Comments.*;
 import java.awt.Dialog;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,30 +18,27 @@ import org.openide.util.NbBundle;
  *
  * @author Ozias
  */
-public class CommentCustomizer extends javax.swing.JPanel {
+public class PrintCustomizer extends javax.swing.JPanel {
 
     private Dialog dialog = null;
     private DialogDescriptor descriptor = null;
     private boolean dialogOK = false; 
 
-    private InlineComment comment;
+    private Print print;
     private JTextComponent target;
    
 
-    /**
-     * Creates new form CommentCustomizer
-     */
-    public CommentCustomizer(InlineComment comment, JTextComponent target) {
-        this.comment = comment;
+    public PrintCustomizer(Print print, JTextComponent target) {
+        this.print = print;
         this.target = target;
 
         initComponents();
     }
 
-    @NbBundle.Messages({"LBL_Customizer_InsertPrefix=Insert", "NAME_html-BR=Line Break"})
+    @NbBundle.Messages({"Print_Customizer=Insert", "NAME_python-Print=Print"})
     public boolean showDialog() {
         dialogOK = false;
-        descriptor = new DialogDescriptor(this, Bundle.LBL_Customizer_InsertPrefix(), true, DialogDescriptor.OK_CANCEL_OPTION, DialogDescriptor.OK_OPTION, new ActionListener() {
+        descriptor = new DialogDescriptor(this, Bundle.Print_Customizer(), true, DialogDescriptor.OK_CANCEL_OPTION, DialogDescriptor.OK_OPTION, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (descriptor.getValue().equals(DialogDescriptor.OK_OPTION)) {
@@ -56,7 +54,7 @@ public class CommentCustomizer extends javax.swing.JPanel {
     }
     
     private void evaluateInput() { 
-        comment.setComment(jTextField1.getText());
+        print.setPrint(jTextField1.getText());
         
     }
 
@@ -73,9 +71,9 @@ public class CommentCustomizer extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(CommentCustomizer.class, "CommentCustomizer.jLabel1.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(PrintCustomizer.class, "PrintCustomizer.jLabel1.text")); // NOI18N
 
-        jTextField1.setText(org.openide.util.NbBundle.getMessage(CommentCustomizer.class, "CommentCustomizer.jTextField1.text")); // NOI18N
+        jTextField1.setText(org.openide.util.NbBundle.getMessage(PrintCustomizer.class, "PrintCustomizer.jTextField1.text")); // NOI18N
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -90,7 +88,7 @@ public class CommentCustomizer extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
+                .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(

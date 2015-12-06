@@ -29,10 +29,10 @@ public class SingleLineIfCustomizer extends javax.swing.JPanel {
     }
     
     
-        @NbBundle.Messages({"LBL_Customizer_InsertPrefix=Insert", "NAME_html-BR=Line Break"})
+        @NbBundle.Messages({"SingleLineIf_Customizer=Insert", "NAME_python-SingleLineIf=One-Line If"})
     public boolean showDialog() {
         dialogOK = false;
-        descriptor = new DialogDescriptor(this, Bundle.LBL_Customizer_InsertPrefix(), true, DialogDescriptor.OK_CANCEL_OPTION, DialogDescriptor.OK_OPTION, new ActionListener() {
+        descriptor = new DialogDescriptor(this, Bundle.SingleLineIf_Customizer(), true, DialogDescriptor.OK_CANCEL_OPTION, DialogDescriptor.OK_OPTION, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (descriptor.getValue().equals(DialogDescriptor.OK_OPTION)) {
