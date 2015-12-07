@@ -4,34 +4,35 @@ import java.awt.Dialog;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.text.JTextComponent;
+import org.netbeans.modules.multilangsourcefilepalette.python.Decisions.Bundle;
 import org.openide.DialogDescriptor;
 import org.openide.DialogDisplayer;
 import org.openide.util.NbBundle;
 
-public class IfStatementCustomizer extends javax.swing.JPanel {
+public class SingleLineIfCustomizer extends javax.swing.JPanel {
 
     private Dialog dialog = null;
     private DialogDescriptor descriptor = null;
     private boolean dialogOK = false; 
 
-    private IfStatement ifStatement;
+    private SingleLineIf singleLineIf;
     private JTextComponent target;
 
     
     /**
      * Creates new form InlineIfCustomizer
      */
-    public IfStatementCustomizer(IfStatement ifStatement, JTextComponent target) {
-        this.ifStatement = ifStatement; 
+    public SingleLineIfCustomizer(SingleLineIf singleLineIf, JTextComponent target) {
+        this.singleLineIf = singleLineIf; 
         this.target = target; 
         initComponents();
     }
     
     
-        @NbBundle.Messages({"IfStatement_Customizer=Insert", "NAME_python-IfStatement=If"})
+        @NbBundle.Messages({"SingleLineIf_Customizer=Insert", "NAME_python-SingleLineIf=One-Line If"})
     public boolean showDialog() {
         dialogOK = false;
-        descriptor = new DialogDescriptor(this, Bundle.IfStatement_Customizer(), true, DialogDescriptor.OK_CANCEL_OPTION, DialogDescriptor.OK_OPTION, new ActionListener() {
+        descriptor = new DialogDescriptor(this, Bundle.SingleLineIf_Customizer(), true, DialogDescriptor.OK_CANCEL_OPTION, DialogDescriptor.OK_OPTION, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (descriptor.getValue().equals(DialogDescriptor.OK_OPTION)) {
@@ -47,8 +48,8 @@ public class IfStatementCustomizer extends javax.swing.JPanel {
     }
     
      private void evaluateInput() { 
-        ifStatement.setIfCondition(jTextField1.getText());
-        ifStatement.setIfBody(jTextField2.getText()); 
+        singleLineIf.setIfCondition(jTextField1.getText());
+        singleLineIf.setIfBody(jTextField2.getText()); 
         
     }
 
@@ -66,13 +67,13 @@ public class IfStatementCustomizer extends javax.swing.JPanel {
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(IfStatementCustomizer.class, "IfStatementCustomizer.jLabel1.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(SingleLineIfCustomizer.class, "SingleLineIfCustomizer.jLabel1.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel2, org.openide.util.NbBundle.getMessage(IfStatementCustomizer.class, "IfStatementCustomizer.jLabel2.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel2, org.openide.util.NbBundle.getMessage(SingleLineIfCustomizer.class, "SingleLineIfCustomizer.jLabel2.text")); // NOI18N
 
-        jTextField1.setText(org.openide.util.NbBundle.getMessage(IfStatementCustomizer.class, "IfStatementCustomizer.jTextField1.text")); // NOI18N
+        jTextField1.setText(org.openide.util.NbBundle.getMessage(SingleLineIfCustomizer.class, "SingleLineIfCustomizer.jTextField1.text")); // NOI18N
 
-        jTextField2.setText(org.openide.util.NbBundle.getMessage(IfStatementCustomizer.class, "IfStatementCustomizer.jTextField2.text")); // NOI18N
+        jTextField2.setText(org.openide.util.NbBundle.getMessage(SingleLineIfCustomizer.class, "SingleLineIfCustomizer.jTextField2.text")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
