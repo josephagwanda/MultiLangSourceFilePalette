@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.netbeans.modules.multilangsourcefilepalette.python.InputOutput;
+package org.netbeans.modules.multilangsourcefilepalette.python.InputOutput.Print;
 
 import javax.swing.text.BadLocationException;
 import javax.swing.text.JTextComponent;

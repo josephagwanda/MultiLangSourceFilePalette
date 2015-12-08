@@ -1,4 +1,4 @@
-package org.netbeans.modules.multilangsourcefilepalette.python.Variables;
+package org.netbeans.modules.multilangsourcefilepalette.python.Variables.Variable;
 
 import javax.swing.text.BadLocationException;
 import javax.swing.text.JTextComponent;

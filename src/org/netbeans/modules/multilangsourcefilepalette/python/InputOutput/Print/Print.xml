@@ -4,7 +4,7 @@
   
   <editor_palette_item version="1.1"> 
       
-      <class name = "org.netbeans.modules.multilangsourcefilepalette.python.InputOutput.Print" /> 
+      <class name = "org.netbeans.modules.multilangsourcefilepalette.python.InputOutput.Print.Print" /> 
       
       <icon16 urlvalue="org/netbeans/modules/multilangsourcefilepalette/icons/BR16.png" /> 
       <icon32 urlvalue="org/netbeans/modules/multilangsourcefilepalette/icons/BR32.png" /> 

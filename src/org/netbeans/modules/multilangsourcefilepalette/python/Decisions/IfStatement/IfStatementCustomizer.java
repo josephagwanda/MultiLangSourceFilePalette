@@ -1,10 +1,9 @@
-package org.netbeans.modules.multilangsourcefilepalette.python.Decisions;
+package org.netbeans.modules.multilangsourcefilepalette.python.Decisions.IfStatement;
 
 import java.awt.Dialog;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.text.JTextComponent;
-import org.netbeans.modules.multilangsourcefilepalette.python.Decisions.Bundle;
 import org.openide.DialogDescriptor;
 import org.openide.DialogDisplayer;
 import org.openide.util.NbBundle;

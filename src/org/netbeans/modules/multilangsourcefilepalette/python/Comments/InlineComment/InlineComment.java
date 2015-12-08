@@ -1,4 +1,4 @@
-package org.netbeans.modules.multilangsourcefilepalette.python.Comments;
+package org.netbeans.modules.multilangsourcefilepalette.python.Comments.InlineComment;
 
 import javax.swing.text.BadLocationException;
 import javax.swing.text.JTextComponent;

@@ -3,7 +3,7 @@
 <filesystem>
 <folder name = "JavaPalette"> 
     <folder name = "Comments"> 
-        <file name = "InlineComment.xml" url="java/Comments/InlineComment.xml"> 
+        <file name = "InlineComment.xml" url="java/Comments/InlineComment/InlineComment.xml"> 
             <attr name = "position" intvalue="150"/>     
         </file>
     </folder>
@@ -11,25 +11,25 @@
 
 <folder name = "PythonPalette"> 
     <folder name = "Comments">
-        <file name = "InlineComment.xml" url="python/Comments/InlineComment.xml"> 
+        <file name = "InlineComment.xml" url="python/Comments/InlineComment/InlineComment.xml"> 
             <attr name = "position" intvalue="150"/>     
         </file>
     </folder>
     <folder name = "Variables"> 
-         <file name = "Variable.xml" url="python/Variables/Variable.xml"> 
+         <file name = "Variable.xml" url="python/Variables/Variable/Variable.xml"> 
             <attr name = "position" intvalue="150"/>     
         </file>
     </folder>
     <folder name = "Decisions"> 
-        <file name = "SingleLineIf.xml" url="python/Decisions/SingleLineIf.xml"> 
+        <file name = "SingleLineIf.xml" url="python/Decisions/SingleLineIf/SingleLineIf.xml"> 
             <attr name = "position" intvalue="150"/>     
         </file>
-        <file name = "IfStatement.xml" url="python/Decisions/IfStatement.xml"> 
+        <file name = "IfStatement.xml" url="python/Decisions/IfStatement/IfStatement.xml"> 
             <attr name = "position" intvalue="150"/>     
         </file>
     </folder>    
     <folder name = "InputOutput"> 
-        <file name = "Print.xml" url="python/InputOutput/Print.xml"> 
+        <file name = "Print.xml" url="python/InputOutput/Print/Print.xml"> 
             <attr name = "position" intvalue="150"/>     
         </file>
     </folder>

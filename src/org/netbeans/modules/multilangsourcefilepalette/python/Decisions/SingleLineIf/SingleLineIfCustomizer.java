@@ -1,10 +1,13 @@
-package org.netbeans.modules.multilangsourcefilepalette.python.Decisions;
+package org.netbeans.modules.multilangsourcefilepalette.python.Decisions.SingleLineIf;
 
+import org.netbeans.modules.multilangsourcefilepalette.CodeParser;
 import java.awt.Dialog;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JEditorPane;
 import javax.swing.text.JTextComponent;
-import org.netbeans.modules.multilangsourcefilepalette.python.Decisions.Bundle;
 import org.openide.DialogDescriptor;
 import org.openide.DialogDisplayer;
 import org.openide.util.NbBundle;
@@ -13,23 +16,26 @@ public class SingleLineIfCustomizer extends javax.swing.JPanel {
 
     private Dialog dialog = null;
     private DialogDescriptor descriptor = null;
-    private boolean dialogOK = false; 
+    private boolean dialogOK = false;
 
     private SingleLineIf singleLineIf;
     private JTextComponent target;
 
-    
+    private ArrayList<String> variableList;
+
     /**
      * Creates new form InlineIfCustomizer
      */
     public SingleLineIfCustomizer(SingleLineIf singleLineIf, JTextComponent target) {
-        this.singleLineIf = singleLineIf; 
-        this.target = target; 
+        this.singleLineIf = singleLineIf;
+        this.target = target;
         initComponents();
+        variableList = new ArrayList<String>();
+        jComboBox1.setModel(new DefaultComboBoxModel(variableList.toArray()));
+
     }
-    
-    
-        @NbBundle.Messages({"SingleLineIf_Customizer=Insert", "NAME_python-SingleLineIf=One-Line If"})
+
+    @NbBundle.Messages({"SingleLineIf_Customizer=Insert", "NAME_python-SingleLineIf=One-Line If"})
     public boolean showDialog() {
         dialogOK = false;
         descriptor = new DialogDescriptor(this, Bundle.SingleLineIf_Customizer(), true, DialogDescriptor.OK_CANCEL_OPTION, DialogDescriptor.OK_OPTION, new ActionListener() {
@@ -46,11 +52,11 @@ public class SingleLineIfCustomizer extends javax.swing.JPanel {
         dialog.setVisible(true);
         return dialogOK;
     }
-    
-     private void evaluateInput() { 
-        singleLineIf.setIfCondition(jTextField1.getText());
-        singleLineIf.setIfBody(jTextField2.getText()); 
-        
+
+    private void evaluateInput() {
+        singleLineIf.setIfCondition(String.valueOf(jComboBox1.getSelectedItem()));
+        singleLineIf.setIfBody(jTextField2.getText());
+
     }
 
     /**
@@ -64,16 +70,16 @@ public class SingleLineIfCustomizer extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox<>();
 
         org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(SingleLineIfCustomizer.class, "SingleLineIfCustomizer.jLabel1.text")); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(jLabel2, org.openide.util.NbBundle.getMessage(SingleLineIfCustomizer.class, "SingleLineIfCustomizer.jLabel2.text")); // NOI18N
 
-        jTextField1.setText(org.openide.util.NbBundle.getMessage(SingleLineIfCustomizer.class, "SingleLineIfCustomizer.jTextField1.text")); // NOI18N
-
         jTextField2.setText(org.openide.util.NbBundle.getMessage(SingleLineIfCustomizer.class, "SingleLineIfCustomizer.jTextField2.text")); // NOI18N
+
+        jComboBox1.setEditable(true);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -87,7 +93,7 @@ public class SingleLineIfCustomizer extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE)
-                    .addComponent(jTextField1))
+                    .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -96,7 +102,7 @@ public class SingleLineIfCustomizer extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -107,9 +113,9 @@ public class SingleLineIfCustomizer extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }

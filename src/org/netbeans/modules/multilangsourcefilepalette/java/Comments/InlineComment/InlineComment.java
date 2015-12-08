@@ -1,4 +1,4 @@
-package org.netbeans.modules.multilangsourcefilepalette.java.Comments;
+package org.netbeans.modules.multilangsourcefilepalette.java.Comments.InlineComment;
 
 import javax.swing.text.BadLocationException;
 import javax.swing.text.JTextComponent;

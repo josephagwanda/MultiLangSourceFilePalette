@@ -1,4 +1,4 @@
-package org.netbeans.modules.multilangsourcefilepalette.python.Decisions;
+package org.netbeans.modules.multilangsourcefilepalette.python.Decisions.SingleLineIf;
 
 import javax.swing.text.BadLocationException;
 import javax.swing.text.JTextComponent;

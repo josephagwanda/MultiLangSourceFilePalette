@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.netbeans.modules.multilangsourcefilepalette.python.InputOutput;
+package org.netbeans.modules.multilangsourcefilepalette.python.InputOutput.Print;
 
-import org.netbeans.modules.multilangsourcefilepalette.python.Comments.*;
 import java.awt.Dialog;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
